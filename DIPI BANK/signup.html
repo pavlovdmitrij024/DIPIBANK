@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация | DIPI BANK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        :root {
+        --accent: #CAFF33;
+        --bg: #393939;
+        --header: #181818;
+        --surface: #232325;
+        --muted: #b3b3b7;
+        --white: #fff;
+        }
+    header {
+      background: var(--header);
+      border-bottom: 1px solid #2d2d2d;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+      min-height: 56px;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-logo {
+      width: 32px;
+      height: 32px;
+      background: #CAFF33;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #222;
+      font-size: 1.24em;
+      margin-right: 8px;
+    }
+    .header-title {
+        color: var(--white);
+      font-weight: 700;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      gap: 22px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.08em;
+      padding: 7px 18px;
+      border-radius: 22px;
+      transition: background 0.2s;
+    }
+    nav a.active, nav a:hover {
+      background: #363636;
+    }
+    .header-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .reg-btn {
+      background: none;
+      color: #fff;
+      border: none;
+      font-size: 1em;
+      padding: 7px 16px;
+      border-radius: 22px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .reg-btn:hover {
+      background: #363636;
+    }
+    .login-btn {
+      color: #252525;
+      background: var(--accent);
+      border: none;
+      font-size: 1em;
+      font-weight: 700;
+      padding: 7px 24px;
+      border-radius: 22px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .login-btn:hover {
+      background: #b7e91e;
+      color: #111;
+    }
+
+        body {
+            background: #393939;
+        }
+        .signup-wrapper {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #393939;
+        }
+        .signup-form {
+            background: #1C1C1C;
+            border-radius: 18px;
+            box-shadow: 0 4px 32px 0 #1118;
+            padding: 38px 32px 32px 32px;
+            max-width: 410px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            position: relative;
+        }
+        .signup-form h2 {
+            margin: 0 0 24px 0;
+            font-size: 1.7em;
+            font-weight: 700;
+            color: #CAFF33;
+            text-align: center;
+        }
+        .signup-form label {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            font-size: 1em;
+            color: #fff;
+        }
+        .signup-form input {
+            background: #232325;
+            border: 1.5px solid #333;
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 1em;
+            color: #fff;
+            outline: none;
+            transition: border 0.18s;
+        }
+        .signup-form input:focus {
+            border: 1.5px solid #CAFF33;
+        }
+        .signup-form .btn-accent {
+            background: #CAFF33;
+            color: #181818;
+            font-weight: 700;
+            border-radius: 999px;
+            padding: 10px 30px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 14px;
+            transition: filter 0.13s;
+            text-decoration: none;
+            width: 100%;
+            display: block;
+        }
+        .signup-form .btn-accent:hover {
+            filter: brightness(0.98);
+        }
+        .auth-link {
+            text-align: center;
+            color: #b3b3b7;
+            font-size: 0.99em;
+            margin-top: 8px;
+        }
+        .auth-link a {
+            color: #CAFF33;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 5px;
+        }
+        .auth-link a:hover {
+            text-decoration: underline;
+        }
+        .signup-form .form-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .signup-form .form-logo img {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+        }
+        .signup-form .form-desc {
+            text-align: center;
+            color: #b3b3b7;
+            font-size: 1em;
+            margin-bottom: 16px;
+        }
+    footer {
+      background: var(--header);
+      padding: 0;
+      border-top: 4px solid #252525;
+      margin-top: 60px;
+    }
+    .footer-grid {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 36px 0 16px 0;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+        color : var(--white);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-logo img {
+      width: 32px;
+      height: 32px;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.01em;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    .footer-socials {
+      display: flex;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .footer-socials a img {
+      width: 28px;
+      height: 28px;
+    }
+    .footer-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 1em;
+      color: var(--accent);
+      margin-top: 10px;
+    }
+    .footer-contacts div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-contacts img {
+      width: 18px;
+      height: 18px;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      padding: 13px 0 8px 0;
+      color: #b8b8b8;
+      font-size: 0.97em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-bottom a {
+      color: #b8b8b8;
+      margin-left: 18px;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .footer-bottom a:hover {
+      color: var(--accent);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="./img/logo.png" alt="logo">
+            <span class="header-title">DIPI BANK</span>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="security.html">Безопасность</a>
+        </nav>
+        <div class="header-actions">
+            <a href="signup.html" class="reg-btn active">Зарегистрироваться</a>
+            <a href="login.html" class="login-btn">Войти</a>
+        </div>
+    </header>
+    <section class="signup-wrapper">
+        <form class="signup-form" autocomplete="on">
+            <div class="form-logo"><img src="./img/logo.png" alt="logo"></div>
+            <h2>Создайте аккаунт</h2>
+            <div class="form-desc">Присоединяйтесь к DIPI BANK и управляйте своими финансами удобно и безопасно</div>
+            <label>
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Введите имя" required>
+            </label>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Введите email" required>
+            </label>
+            <label>
+                <span>Пароль</span>
+                <input type="password" name="password" placeholder="Придумайте пароль" required>
+            </label>
+            <label>
+                <span>Подтвердите пароль</span>
+                <input type="password" name="password2" placeholder="Повторите пароль" required>
+            </label>
+            <button type="submit" class="btn-accent w-full">Зарегистрироваться</button>
+            <div class="auth-link">
+                Уже есть аккаунт? <a href="login.html">Войти</a>
+            </div>
+        </form>
+    </section>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="./img/logo.png" alt="DIPI BANK Logo">
+          <span>DIPI BANK</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="security.html">Безопасность</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#"><img src="./img/tg.png" alt="tg"></a>
+          <a href="#"><img src="./img/fac.png" alt="Facebook"></a>
+          <a href="#"><img src="./img/inst.png" alt="Instagram"></a>
+        </div>
+      </div>
+      <div class="footer-contacts">
+        <div><img src="./img/m.png" alt="mail"> hello@skillbridge.com</div>
+        <div><img src="./img/p.png" alt="phone"> +91 9185 25 2309</div>
+        <div><img src="./img/g.png" alt="world"> Мы по всему миру</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DIPI Bank. Все права защищены.</span>
+      <nav class="flex gap-4">
+        <a href="#" style="text-decoration: none;">Политика конфиденциальности</a>
+        <a href="#" style="text-decoration: none;">Условия обслуживания</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
